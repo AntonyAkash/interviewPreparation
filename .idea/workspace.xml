@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd6ff8d2-f11a-44c2-859f-0f169383f2c1" name="Changes" comment="" />
+    <list default="true" id="cd6ff8d2-f11a-44c2-859f-0f169383f2c1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Interview Questions" beforeDir="false" afterPath="$PROJECT_DIR$/Interview Questions" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,15 +16,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "AntonyAkash"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AntonyAkash&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/AntonyAkash/Java8practice.git",
+    "url": "https://github.com/AntonyAkash/interviewPreparation.git",
     "accountId": "ab2387c8-a7e1-4b10-befc-bc004e5518bd"
   }
 }]]></component>
@@ -52,5 +54,16 @@
       <updated>1754040953585</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
