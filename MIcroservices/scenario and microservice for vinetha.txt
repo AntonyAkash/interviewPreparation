@@ -1,0 +1,306 @@
+
+
+----------------------------------------------types of design pattern---------------
+Microservices Design Patterns
+
+1.Aggregator
+2.API Gateway
+3.Chained (or Chain of Responsibility)
+4.Asynchronous Messaging
+5.Database
+6.Event Sourcing
+7.Branch Pattern
+8.Command Query Responsibility Segregation (CQRS)
+9.Circuit Breaker
+10.Decomposition Design
+--------------------------------------------------ways to improve microservice security-----------------------------------
+using spring security
+
+
+Mutual TLS (MTLS) verifies the identity of both parties in a network connection and is vital to microservices security.
+
+Implement centralized monitoring
+
+Keep a close eye on your microservices by combining logging and monitoring. This will provide a clearer view of the system and help you locate security issues faster. Use monitoring tools like Prometheus for metrics collection and Grafana for visualization, or use comprehensive solutions like New Relic and Datadog to catch and address security concerns before they become critical. These tools aid in real-time monitoring and help analyze trends and patterns for proactive security management.
+
+An API gateway acts as the main entrance to the system and helps manage security more effectively. This gateway makes it easier to control access and keeps data secure and private.
+
+-----------------------------------------------how to improve api performance------------------
+⚡ 1. Reduce API Latency
+✅ a) Minimize Response Payload
+
+⚙️ 2. Use Proper Caching
+
+
+🚀 3. Use Asynchronous & Non-blocking APIs
+
+For parallel or independent calls inside an API:
+
+
+🌐 4. Reduce Network Overhead
+
+
+Keep payloads in JSON, avoid XML unless needed.
+
+
+-----------------------------------------------api version controlling or backward compatability of api -------------------------
+Let’s break down API Versioning and Backward Compatibility clearly, especially from a Spring Boot REST API or microservices perspective.
+
+🧭 1. Why API Versioning Matters
+
+APIs evolve — new features, new data models, or deprecations.
+But existing clients (mobile apps, frontends, or other microservices) must keep working without breaking.
+
+So, versioning ensures:
+
+Safe evolution of APIs.
+
+Backward compatibility.
+
+Controlled client migration.
+
+⚡ 2. Types of API Versioning
+✅ a) URI Versioning (most common & simplest)
+
+
+
+✅ b) Header Versioning
+
+Clients specify version in request header:
+
+
+
+✅ c) Media Type (Content Negotiation / Accept Header)
+
+Version included in Accept header:
+
+GET /users
+Accept: application/vnd.company.v2+json
+
+
+✅ d) Query Parameter Versioning
+GET /users?version=1
+
+
+-----------------------------------------------how to improve SQL performance------------------
+
+BY INDEXING
+
+-----------------------------------------------data base clusters------------------------------
+A database cluster is a group of database servers (nodes) that work together to improve availability, scalability, and fault tolerance.
+
+Instead of one central database, you have multiple connected databases that:
+
+Share data (replicated)
+
+Distribute load (partitioned or sharded)
+
+Automatically recover from failures
+------------------------------------------------------------------------------------------------------------------------
+JAVA refrance VS C POINTERS //in c pointers we can perform Arithmetic oprations
+---------------------------------------------------------
+REAL SCENARIO WHERE YOU HAVE USED PROTYPE DESIGN PATTERN
+
+It lets you clone existing objects instead of creating new ones from scratch. 
+
+Used when object creation is expensive or complex, but a copy (with some changes) can be made quickly.
+
+--------------------------------------------------------------------------------------------------------------
+multi threading in spring boot application
+
+1. What is Multithreading in Spring Boot?
+
+Multithreading allows your Spring Boot application to execute multiple tasks concurrently, improving throughput and responsiveness — especially in I/O-heavy or parallel processing scenarios.
+
+Spring Boot provides built-in mechanisms to handle multithreading safely and efficiently using the Spring Task Execution Framework and @Async support.
+
+⚙️ 2. Common Use Cases
+Use Case	Description
+📩 Sending multiple emails or notifications in parallel	Fire async tasks per recipient
+🚗 Processing multiple ride bookings	Each booking request runs in its own thread
+📈 Batch jobs / data import	Each file or record processed concurrently
+🌐 Calling multiple external APIs	Parallel API calls using async or CompletableFuture
+🧠 Heavy computations	Offload long-running tasks from main thread
+🚀 3. Enabling Multithreading in Spring Boot
+Step 1: Enable Async Support
+
+Add @EnableAsync in your main application class:
+
+@SpringBootApplication
+@EnableAsync
+public class DemoApplication { }
+
+Step 2: Define Async Methods
+
+Use @Async on methods that should run in a separate thread:
+
+@Service
+public class NotificationService {
+
+    @Async
+    public void sendEmail(String email) {
+        System.out.println("Sending email to: " + email + " - " + Thread.currentThread().getName());
+        // simulate delay
+        try { Thread.sleep(2000); } catch (InterruptedException e) { }
+        System.out.println("Email sent to: " + email);
+    }
+}
+-------------------------------------------------------------------------------------------------------------
+
+CREATE DATE IN THE GIVEN FORMAT USING JAVA INBUILT METHODS (dd/MM/yyyy)
+
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+LocalDate date = LocalDate.parse(dateStr, formatter);
+
+-------------------------------------------------------------------------------------------
+
+GRAPHQL WHEN TO USE IT  // it gives ability for the frontend to ask for what exactly it needs from the Api // it is API query language
+-------------------------------------How to Handle Memory leaks----------------------------
+
+memory leaks in a Java/Spring Boot application can be handled by
+
+ @PreDestroy
+        public void cleanup() {
+            listeners.clear(); // prevent memory leak at shutdown
+        }
+
+//try with resource
+public void processDatabase() {
+        // Use try-with-resources to avoid leaks
+        try (var conn = Database.getConnection()) {
+            // process
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+//dereferencing
+public static void clearGlobalCache() {
+        globalCache.clear(); // free memory
+        globalCache = null;  // remove static reference
+    }
+-------------------------------------
+
+1. What is Salting?
+
+Salting is the process of adding a random string (called a salt) to a password before hashing it.
+Prevent attackers from using precomputed hash tables (rainbow tables) to crack passwords.
+
+123456  //hashed -> 3451#$%#%^&^&%^%
+
+123456 + "absc" hasted-> #6543531835v 58371v*&$^$
+
+----------Purpose:
+
+Prevent attackers from using precomputed hash tables (rainbow tables) to crack passwords.
+
+Make identical passwords hash differently for each user.
+
+collitions wont happen if we use salting
+
+---------how it works
+
+2. How it Works (Step by Step)
+
+User creates a password:
+
+Password: "MySecret123"
+
+
+Generate a random salt:
+
+Salt: "x8!G9pL2"
+
+
+Combine password + salt:
+
+"MySecret123x8!G9pL2"
+
+
+Hash the combined string (e.g., using SHA-256 or bcrypt):
+
+Hash: "7d3f1c4a..."
+
+
+--------------------------------------------
+
+
+
+1. Map vs FlatMap — Concept  //Vine I will explain this
+
+Operator   Input → Output	Description
+map	       T → R	        Transforms each element of a stream into exactly one element in the resulting stream.
+flatMap	  T → Stream<R>  	Transforms each element into a stream of elements, then flattens all streams into a single stream.
+
+Example 1: Map
+import java.util.*;
+import java.util.stream.*;
+
+public class MapExample {
+    public static void main(String[] args) {
+        List<String> names = Arrays.asList("Antony", "John");
+
+        // map: convert to upper case
+        List<String> upper = names.stream()
+                                  .map(String::toUpperCase)
+                                  .collect(Collectors.toList());
+
+        System.out.println(upper);
+    }
+}
+
+
+Output:
+
+[ANTONY, JOHN]
+
+
+✅ Each element maps to exactly one element.
+
+Example 2: FlatMap
+
+Suppose each name has multiple characters and we want a stream of characters:
+
+import java.util.*;
+import java.util.stream.*;
+
+public class FlatMapExample {
+    public static void main(String[] args) {
+        List<String> names = Arrays.asList("Antony", "John");
+
+        // flatMap: split each name into chars, then flatten
+        List<String> chars = names.stream()
+            .flatMap(name -> Arrays.stream(name.split("")))
+            .collect(Collectors.toList());
+
+        System.out.println(chars);
+    }
+}
+
+
+Output:
+
+[A, n, t, o, n, y, J, o, h, n]
+
+
+✅ flatMap flattened multiple streams (from name.split("")) into one single stream.
+
+Example 3: Map Produces Stream — Without FlatMap
+List<Stream<String>> listOfStreams = names.stream()
+    .map(name -> Arrays.stream(name.split("")))
+    .collect(Collectors.toList());
+
+System.out.println(listOfStreams);
+
+
+Output:
+
+[Ljava.util.stream.ReferencePipeline$Head@1a2b3c, ...]
+
+
+Without flatMap, you get Stream of Streams, not a flat stream.
+
+That’s why flatMap is required to flatten nested streams.
+
+ 	
+

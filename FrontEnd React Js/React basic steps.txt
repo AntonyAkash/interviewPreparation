@@ -1,0 +1,28 @@
+Download Noad Lts version :  https://nodejs.org/en/download
+move file to temp folder install
+------------------------------------------------
+open FrontEnd React js folder in VS code 
+cd to 1.functional_component project
+//enter npm i command in terminal as your project won't contain any node modules when downloaded from git very first time
+npm i 
+------------------------------------------------
+//installing global p[ackages in parent folder
+ npm install -g create-react-app
+------------------------------------------------
+//creating react app
+npx create-react-app srikrishna
+--------------------------------------------------
+install basic extenstions like
+react ES7
+prettier extenstion
+-----------------------------------------------
+//use this command when you get web vitals error
+npm install --save-dev web-vitals
+
+-----------------------------------------------
+create a component (eg) child.js - rfce
+
+----------------------------------------------
+Theory concepts
+1.react architecture and server side rendering
+2.why react and ES7
