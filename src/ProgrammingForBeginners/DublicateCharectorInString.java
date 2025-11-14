@@ -1,5 +1,8 @@
 package ProgrammingForBeginners;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class DublicateCharectorInString {
 	public static void main(String[] args) {
         String[] s = "abcabcghh".split("");
@@ -15,5 +18,8 @@ public class DublicateCharectorInString {
         }
 
         System.out.println(result);
+        
+        var name=Arrays.stream(s).distinct().collect(Collectors.joining());
+        System.out.println(name);
     }
 }

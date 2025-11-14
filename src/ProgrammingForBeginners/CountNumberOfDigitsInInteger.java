@@ -11,5 +11,7 @@ public class CountNumberOfDigitsInInteger {
         }
 
         System.out.println(c);
+        System.out.println(String.valueOf(1234523).length());
+        System.out.println("abcd123".chars().filter(Character::isDigit).map(Character::getNumericValue).sum());
     }
 }

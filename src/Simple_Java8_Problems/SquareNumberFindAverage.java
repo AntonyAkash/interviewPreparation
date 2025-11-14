@@ -2,6 +2,7 @@ package Simple_Java8_Problems;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class SquareNumberFindAverage {
 	public static void main(String[] args) {
@@ -15,5 +16,8 @@ public class SquareNumberFindAverage {
                          .getAsDouble();            // extract result
 
         System.out.println(avg);
+        
+       Double avg1 =list.stream().map(i->i*i).collect(Collectors.averagingDouble(Integer::valueOf));
+       System.out.println(avg1);
     }
 }

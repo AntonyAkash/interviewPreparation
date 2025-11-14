@@ -1,6 +1,7 @@
 package ProgrammingForBeginners;
 
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class palindrome {
 	 public static void main(String[] args) {
@@ -24,5 +25,10 @@ public class palindrome {
 	        } else {
 	            System.out.println(reversed + " not palindrome");
 	        }
+	        String s=String.valueOf(123);
+	        var b=IntStream.range(0,s.length()).boxed().allMatch(i->s.charAt(i)==(s.charAt(s.length()-i-1)));
+	        System.out.println(b);
 	    }
 }
+
+	 

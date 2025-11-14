@@ -1,6 +1,7 @@
 package ProgrammingForBeginners;
 
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class fibonacci_eriers {
 	public static void main(String[] args) {
@@ -17,5 +18,7 @@ public class fibonacci_eriers {
             firstNumber = secondnumber;
             secondnumber = nextnumber;
         }
+        System.out.println("dghgdas");
+        
     }
 }

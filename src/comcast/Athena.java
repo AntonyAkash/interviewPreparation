@@ -7,27 +7,15 @@ import java.util.stream.Collectors;
 public class Athena {
 	
 public static void main(String[] args) {
-	//Check if a String is Anagram
 
-	//("listen" and "silent" → Anagrams)
-	
-	//romman numbers and there equalent values
-	
+	//problem is c alled as anagram
 	String one="aabbcc";
-	String two="abbbcc";
-	boolean b=false;
-	/*
-	 * Map<String,Long>
-	 * map1=Arrays.asList(one.split("")).stream().collect(Collectors.groupingBy(
-	 * Function.identity(),Collectors.counting())); Map<String,Long>
-	 * map2=Arrays.asList(two.split("")).stream().collect(Collectors.groupingBy(
-	 * Function.identity(),Collectors.counting())); if(map1.equals(map2)) { b=true;
-	 * }
-	 */
-	if(Arrays.asList(one.split("")).stream().sorted().collect(Collectors.joining())
-		.equals(Arrays.asList(two.split("")).stream().sorted().collect(Collectors.joining()))){
-		b=true;
+	String two="abbcca";
+	if(Arrays.stream(one.split("")).sorted().collect(Collectors.joining()).equals(Arrays.stream(one.split("")).sorted().collect(Collectors.joining()))) {
+		System.out.printf(" %s and %s are anagrams",one,two);
+	}else {
+		System.out.println("Not an anagram");
 	}
-	System.out.println(b);
+
  }
 }

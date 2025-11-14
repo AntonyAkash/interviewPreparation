@@ -21,6 +21,7 @@ public class AddDigitInNumber {
 		        }
 
 		        System.out.println(sum);
+		        sc.close();
 		    }
 	
 

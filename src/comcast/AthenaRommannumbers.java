@@ -2,7 +2,7 @@ package comcast;
 
 public class AthenaRommannumbers {
 	public static void main(String[] args) {
-		char[] romanChars = {'I','X'};
+		char[] romanChars = {'I','V'};
 		String result="";
 		for(char c:romanChars) {
 			result+= String.valueOf(getRomanValue(c));

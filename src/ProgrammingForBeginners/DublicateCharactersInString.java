@@ -1,5 +1,11 @@
 package ProgrammingForBeginners;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.function.Function;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
 public class DublicateCharactersInString {
 	public static void main(String[] args) {
         // duplicate characters in string
@@ -15,6 +21,10 @@ public class DublicateCharactersInString {
             }
         }
         System.out.println(result);
+        
+        var name =Arrays.asList(s.split("")).stream().filter(i->Collections.frequency(Arrays.asList(s.split("")),i)>1).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+        System.out.println(name);
+        
     }
 
 }

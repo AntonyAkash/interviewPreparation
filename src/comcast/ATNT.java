@@ -11,7 +11,9 @@ import java.util.stream.Collectors;
 public class ATNT {
 	public static void main(String[] args) {
 		List<String> names = Arrays.asList("rohit", "urmila", "rohit", "urmila", "ram", "sham", "sita", "gita");
-		names.stream().sorted(Comparator.comparing(String::valueOf)).toList().forEach(System.out::println);;
+		names.stream().sorted(Comparator.comparing(String::valueOf)).forEach(System.out::println);
+		Map<String,List<String>> map1=names.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.toList()));
+		System.out.println(map1);
 		Map<String,Long> namesfreq=names.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 		System.out.println(namesfreq);
 		
@@ -21,8 +23,11 @@ public class ATNT {
 	        map.put(3, "aws");
 	        
 	      Map<Integer,String> map2 =map.entrySet().stream().filter(i->i.getValue()=="linode").collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-	      System.out.println(map2);
+	      System.out.println("map to map "+map2);
 	      
+	      map.entrySet().stream().filter(i->i.getValue().equals("heroku")).collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue))
+	      .forEach((a,b)->System.out.println(a+":"+b));
+	       
 	      Map<String, Integer> unsortMap = new HashMap<>();
 
 	        unsortMap.put("z", 10);
@@ -47,7 +52,13 @@ public class ATNT {
 
 	        unsortMap.put("f", 9);
 	        
-	        unsortMap.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getKey)).forEach(System.out::println);
+	        unsortMap.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getKey)).forEach(System.out::print);
+	        
+	        System.out.println();
+	        
+	       Map<String,Integer> sortedmap=unsortMap.entrySet().stream().sorted(Map.Entry.<String,Integer>comparingByValue().thenComparing(Map.Entry.comparingByKey()).reversed()).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+	       
+           System.out.println(sortedmap);
 	        
 	}
 }

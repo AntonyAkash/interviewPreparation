@@ -9,6 +9,9 @@ public class FindMaxAndMinNumbers {
 	public static void main(String[] args) {
         List<Integer> list = Arrays.asList(10, 1, 2, 3, 4, 5, 6);
         System.out.println(list);
+        
+        var listsort = list.stream().sorted(Comparator.reverseOrder()).toList();
+        System.out.println(listsort);
 
         // Approach 1: Sorting for min and max
         int min = list.stream().sorted().findFirst().get();
@@ -28,5 +31,8 @@ public class FindMaxAndMinNumbers {
 
         int maxComparator = list.stream().max((a, b) -> a < b ? -1 : a > b ? 1 : 0).get();
         System.out.println(maxComparator);
+        
+        int maxcompa=list.stream().max(Comparator.comparing(Integer::valueOf)).get();
+        System.out.println(maxcompa);
     }
 }
