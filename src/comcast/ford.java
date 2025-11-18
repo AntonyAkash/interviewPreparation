@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class ford {
 	public static void main(String[] args) {
 	
-		List<String> list=Arrays.asList("Mustach Mach E is best EV right now".replaceAll(" ","").split(""));
+		List<String> list=Arrays.asList("Mustach Mach E is best EV right now".strip().split(""));
 		Map<String,Long> map=list.stream().map(String::toLowerCase).filter(i->i.toLowerCase().matches("a|e|i|o|u")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 		System.out.println(map);
 		
