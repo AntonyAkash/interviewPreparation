@@ -1,6 +1,7 @@
 package practice;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class dateTimeformat {
@@ -8,8 +9,7 @@ public class dateTimeformat {
 		LocalDate date=LocalDate.now();
 		System.out.println(date);
 		
-		String s=LocalDate.now().format(DateTimeFormatter.ofPattern("yyy-dd"));
+		String s=LocalDateTime.now().format(DateTimeFormatter.ofPattern("MM-dd-yy hh:mm:ss"));
 		System.out.println(s);
 	}
-
 }

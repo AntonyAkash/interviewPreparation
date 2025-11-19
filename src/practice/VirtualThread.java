@@ -10,7 +10,7 @@ public class VirtualThread {
 		 */
 		 
 		//creating 10000 virual threads
-		IntStream.rangeClosed(0, 1).forEach(i->{
+		IntStream.rangeClosed(0, 100).forEach(i->{
 			Thread.ofVirtual().start(()->{
 				System.out.println(Thread.currentThread());
 			}
