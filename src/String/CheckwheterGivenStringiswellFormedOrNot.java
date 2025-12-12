@@ -11,12 +11,12 @@ public class CheckwheterGivenStringiswellFormedOrNot {
 		Stack<Character> s=new Stack<>();
 		for(int i=0;i<a.length();i++) {
 			char c=a.charAt(i);
-			if(s.isEmpty()) {
-				s.add(c);
+			if(s.isEmpty()) { 
+				s.push(c);
 			}else if(c=='{'||c=='['||c=='('){
 				s.push(c);
 			}
-			else if(c=='}' && s.peek()=='{') {
+			else if(c=='}' && s.peek()=='{') { //if we try too peek element when the stack iis empty we will get empty stack exception
 				s.pop();
 				
 			}else if(c==')' && s.peek()=='(') {
