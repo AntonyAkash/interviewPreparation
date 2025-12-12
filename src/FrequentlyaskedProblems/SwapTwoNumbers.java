@@ -16,7 +16,16 @@ public class SwapTwoNumbers {
 	    a=a*b;//200
 	    b=a/b;//200/10=20
 	    a=a/b;//200/20=10
-	    System.out.println(20);
+	    System.out.println(a+" "+b);
+	    
+	    //using Xor
+	    a=10;
+	    b=20;
+	    a=a^b;//10^20=30
+	    b=a^b;
+	    a=a^b;
+	    System.out.println(a+" "+b);
+	    
 	}
 
 }
