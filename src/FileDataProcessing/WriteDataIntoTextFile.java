@@ -2,6 +2,7 @@ package FileDataProcessing;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -15,8 +16,20 @@ public class WriteDataIntoTextFile {
 					+ "Her contributions to spiritual life in the region made her a respected figure among the faithful, \r\n"
 					+ "\r\n"
 					+ "and she continues to be honored for her holiness and humble service.");
-			bw.write("\t thank you");
+			bw.write("\t thank you \n");
+			bw.append("\n ******************************");
+			bw.write('@');
 		}
+		
+		
+		  try(BufferedReader br=new BufferedReader(new FileReader("C:\\Temp\\testFile.txt"))){ 
+			  String str;
+		  while((str=br.readLine())!=null) 
+		  { 
+			  System.out.println(str);
+		  }
+		 }
+		 
 	}
 
 }
