@@ -12,7 +12,7 @@ public class dublicateinStringinjava {
 		}
 		for(int i=0;i<count.length;i++) {
 			int c=0;
-			if(count[i]!=0) {
+			if(count[i]>1) {
 				System.out.println((char) i+":"+(int)count[i]);
 			}
 		}
