@@ -8,9 +8,8 @@ public class BNB {
 	public static void main(String[] args) {
 		
 		String s="Antony";
-		List<String> list=Arrays.asList(s.split(""));
-		list.stream().filter(i->Collections.frequency(list, i)>1).distinct().forEach(System.out::print);
-	
+		var list=Arrays.asList(s.split(""));
+		list.stream().filter(i->Collections.frequency(list,i)>1).distinct().forEach(System.out::println);
 	}
 
 }

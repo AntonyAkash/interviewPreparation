@@ -14,7 +14,7 @@ class Employee {
     private String City;
 
     public Employee(int id, String name, int age, String city) {
-		super();
+		//super();
 		this.id = id;
 		this.name = name;
 		this.age = age;
@@ -54,8 +54,13 @@ class Employee {
     }
 
 public class FindageofEmployeeGreaterThan25 {
-	
-	public static void main(String[] args) {
+
+    @Override
+    public String toString() {
+        return "FindageofEmployeeGreaterThan25{}";
+    }
+
+    public static void main(String[] args) {
         List<Employee> list = Arrays.asList(new Employee(1, "Antony", 27, "Chennai"),
                 new Employee(2, "Priyanka", 25, "Vishak"),
                 new Employee(3, "Sharanya", 24, "Chennai"),
@@ -64,7 +69,7 @@ public class FindageofEmployeeGreaterThan25 {
 
         List<Employee> EmployeeagemoreThan25 = list.stream()
             .filter(i->i.getAge()>25)
-            .collect(Collectors.toList());
+            .toList();
 
         EmployeeagemoreThan25.forEach(System.out::println);
         

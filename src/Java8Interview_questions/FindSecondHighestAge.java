@@ -14,12 +14,11 @@ public class FindSecondHighestAge {
             new Employee(4, "Immanuel", 26, "Hyderabad")
         );
 
-        Integer secondHighestAge = list.stream()
-            .map(Employee::getAge)
+        Employee secondHighestAgeEmploee = list.stream()
             .distinct()
-            .sorted(Comparator.reverseOrder())
+            .sorted(Comparator.comparing(Employee::getAge).reversed())
             .skip(1)
             .findFirst().get();
-        System.out.println(secondHighestAge);
+        System.out.println(secondHighestAgeEmploee);
     }
 }

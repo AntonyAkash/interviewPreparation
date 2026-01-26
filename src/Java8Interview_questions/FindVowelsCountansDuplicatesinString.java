@@ -15,7 +15,7 @@ public class FindVowelsCountansDuplicatesinString {
 
         //count the vowels in string
         //Predicate<String> p = i -> i.toLowerCase().contains("a") ? true : i.contains("e") ? true : i.contains("i") ? true : i.contains("o") ? true : i.contains("u") ? true : false;
-        Long c = sList.stream().filter(i -> i.toLowerCase().matches("a|e|i|o|u")).count();
+        long c = sList.stream().filter(i -> i.toLowerCase().matches("a|e|i|o|u")).count(); //.matches([aeiou])
         System.out.println("the count of Vowels in string = " + c);
 
         //find duplicates in string
