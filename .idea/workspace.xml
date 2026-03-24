@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3a6564f-6fcd-4482-b5c7-4c3230e683fc" name="Changes" comment="Refactor string processing and improve performance in various classes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Java8Interview_questions/FindVowelsCountansDuplicatesinString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Java8Interview_questions/FindVowelsCountansDuplicatesinString.java" afterDir="false" />
+    <list default="true" id="d3a6564f-6fcd-4482-b5c7-4c3230e683fc" name="Changes" comment="Add Altimetrix class for array manipulation and target sum functionality">
+      <change beforePath="$PROJECT_DIR$/Interview Questions" beforeDir="false" afterPath="$PROJECT_DIR$/Interview Questions" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +55,7 @@
     "Application.EvenLengthWordsInAString.executor": "Run",
     "Application.FindSecondHighestAge.executor": "Run",
     "Application.FindVowelsCountansDuplicatesinString.executor": "Debug",
+    "Application.LongestCommonPrefix.executor": "Debug",
     "Application.RemoveWhiteSpaceinTheString.executor": "Run",
     "Application.coutnnumberofwordsinAstring.executor": "Run",
     "Application.dublicateinStringinjava.executor": "Debug",
@@ -73,20 +73,7 @@
     "ignore.virus.scanning.warn.message": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.FindVowelsCountansDuplicatesinString">
-    <configuration name="BNB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Java8Interview_questions.BNB" />
-      <module name="Comcast" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Java8Interview_questions.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.LongestCommonPrefix">
     <configuration name="Comparetwoarraysandgettherecommenvalue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Java8Interview_questions.Comparetwoarraysandgettherecommenvalue" />
       <module name="Comcast" />
@@ -139,13 +126,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LongestCommonPrefix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Java8Interview_questions.LongestCommonPrefix" />
+      <module name="Comcast" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Java8Interview_questions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LongestCommonPrefix" />
         <item itemvalue="Application.FindVowelsCountansDuplicatesinString" />
         <item itemvalue="Application.FindSecondHighestAge" />
         <item itemvalue="Application.Deloite" />
         <item itemvalue="Application.Comparetwoarraysandgettherecommenvalue" />
-        <item itemvalue="Application.BNB" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +165,23 @@
       <option name="project" value="LOCAL" />
       <updated>1769437675702</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Altimetrix class for array manipulation and target sum functionality">
+      <option name="closed" value="true" />
+      <created>1774341643879</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1774341643879</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add Altimetrix class for array manipulation and target sum functionality">
+      <option name="closed" value="true" />
+      <created>1774341649321</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1774341649321</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,7 +209,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactor string processing and improve performance in various classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor string processing and improve performance in various classes" />
+    <MESSAGE value="Add Altimetrix class for array manipulation and target sum functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Altimetrix class for array manipulation and target sum functionality" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -284,6 +301,19 @@
           <url>file://$PROJECT_DIR$/src/Java8Interview_questions/FindVowelsCountansDuplicatesinString.java</url>
           <line>10</line>
           <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Java8Interview_questions/LongestCommonPrefix.java</url>
+          <line>5</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Java8Interview_questions/LongestCommonPrefix.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
