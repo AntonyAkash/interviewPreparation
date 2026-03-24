@@ -4,24 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3a6564f-6fcd-4482-b5c7-4c3230e683fc" name="Changes" comment="">
+    <list default="true" id="d3a6564f-6fcd-4482-b5c7-4c3230e683fc" name="Changes" comment="Refactor string processing and improve performance in various classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview Questions" beforeDir="false" afterPath="$PROJECT_DIR$/Interview Questions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview Questions/Antony's Interview Question git.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Interview Questions/Antony's Interview Question git.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Java8Interview_questions/BNB.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Java8Interview_questions/BNB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Java8Interview_questions/Citustech.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Java8Interview_questions/Citustech.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Java8Interview_questions/Comparetwoarraysandgettherecommenvalue.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Java8Interview_questions/Comparetwoarraysandgettherecommenvalue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Java8Interview_questions/Employee$FindageofEmployeeGreaterThan25.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Java8Interview_questions/Employee$FindageofEmployeeGreaterThan25.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Java8Interview_questions/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Java8Interview_questions/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Java8Interview_questions/FindSecondHighestAge.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Java8Interview_questions/FindSecondHighestAge.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Java8Interview_questions/FindVowelsCountansDuplicatesinString.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Java8Interview_questions/FindVowelsCountansDuplicatesinString.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Java8Interview_questions/BNB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Java8Interview_questions/BNB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Java8Interview_questions/Citustech.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Java8Interview_questions/Citustech.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Java8Interview_questions/Comparetwoarraysandgettherecommenvalue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Java8Interview_questions/Comparetwoarraysandgettherecommenvalue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Java8Interview_questions/Deloite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Java8Interview_questions/Deloite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Java8Interview_questions/FindSecondHighestAge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Java8Interview_questions/FindSecondHighestAge.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Java8Interview_questions/FindVowelsCountansDuplicatesinString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Java8Interview_questions/FindVowelsCountansDuplicatesinString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Java8Interview_questions/FindageofEmployeeGreaterThan25.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Java8Interview_questions/FindageofEmployeeGreaterThan25.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +69,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "practice",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true"
   }
 }]]></component>
@@ -172,6 +157,15 @@
       <option name="presentableId" value="Default" />
       <updated>1768274870616</updated>
     </task>
+    <task id="LOCAL-00001" summary="Refactor string processing and improve performance in various classes">
+      <option name="closed" value="true" />
+      <created>1769437675702</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1769437675702</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,6 +190,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactor string processing and improve performance in various classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor string processing and improve performance in various classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

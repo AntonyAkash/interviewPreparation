@@ -19,7 +19,7 @@ public class FindVowelsCountansDuplicatesinString {
         System.out.println("the count of Vowels in string = " + c);
 
         //find duplicates in string
-        List<String> duplicate = sList.stream().filter(i -> Collections.frequency(sList, i) > 1).collect(Collectors.toList());
+        List<String> duplicate = sList.stream().filter(i -> Collections.frequency(sList, i) > 1).toList();
         System.out.println(duplicate.stream().reduce((a, b) -> a + b).get());
     }
 

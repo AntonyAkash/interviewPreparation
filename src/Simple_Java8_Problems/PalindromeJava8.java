@@ -23,7 +23,7 @@ public class PalindromeJava8 {
 
         // Reverse a String
         String name = "Antony";
-        String rev = IntStream.rangeClosed(0, name.length() - 1)
+        String rev = IntStream.range(0, name.length() - 1)
             .boxed()
             .map(i -> String.valueOf(name.charAt(name.length() - i - 1)))
             .collect(Collectors.joining());
