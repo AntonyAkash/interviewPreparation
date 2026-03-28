@@ -15,26 +15,15 @@ public class Main {
             new Student("G", "Science", 88)
         );
 
-        Map<String, Optional<Integer>> result =
-            students.stream()
-                .collect(Collectors.groupingBy(
-                    Student::getSubject,
-                    Collectors.mapping(
-                        Student::getMarks,
-                        Collectors.collectingAndThen(
-                            Collectors.toList(),
-                            list -> list.stream()
-                                    .distinct()
-                                    .sorted(Comparator.reverseOrder())
-                                    .skip(1)
-                                    .findFirst()
-                        )
-                    )
-                ));
+        //Map<String, Optional<Integer>> result =
+            students.stream().collect(Collectors.groupingBy(Student::getSubject,Collectors.mapping(Student::getMarks, 
+            		Collectors.collectingAndThen(Collectors.toList(), 
+            				list->list.stream().distinct().sorted(Comparator.reverseOrder()).skip(1).findFirst())))).forEach((s,m)->System.out.printf("%s = %d %n",s,m.get()));
 
-        result.forEach((subject, mark) ->
-            System.out.println(subject + " -> " + mark.orElse(null))
-        );
+			/*
+			 * result.forEach((subject, mark) -> System.out.println(subject + " -> " +
+			 * mark.orElse(null)) );
+			 */
     }
 
 }

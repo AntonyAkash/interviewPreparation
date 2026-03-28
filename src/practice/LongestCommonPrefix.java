@@ -8,15 +8,15 @@ public class LongestCommonPrefix {
         
         for(int i=1;i<arr.length;i++) {//start with first index
         	//need to find the prefix that is common between the iterated elemets // so prefix size should need to reduced
-        	
+        	                                                             
         	while(arr[i].indexOf(prefix)!=0) {//if prefix present in start of arr[i] arr[i].indexOf(prefix)=0;
         		                              //if prefix present somewhere in arr[i] arr[i].indexOf(prefix)= >0;
         		                              //if prefix present not in arr[i] arr[i].indexOf(prefix)=-1;
-        		
+        		prefix=prefix.substring(0,prefix.length()-1);//flowe
+        		if(prefix.isEmpty()) return "";
         	}
         }
-        
-        
+        return prefix;     
     }
 
     public static void main(String[] args) {
